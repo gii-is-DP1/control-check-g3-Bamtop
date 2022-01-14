@@ -51,6 +51,7 @@ public class Visit extends BaseEntity {
 	@NotEmpty
 	@Column(name = "description")
 	private String description;
+	
 
 	/**
 	 * Holds value of property pet.
@@ -62,6 +63,10 @@ public class Visit extends BaseEntity {
 	/**
 	 * Creates a new instance of Visit for the current date
 	 */
+	//@ManyToOne
+	//@JoinColumn(name = "recoveryroom")
+	//RecoveryRoom recovery_room;
+	
 	public Visit() {
 		this.date = LocalDate.now();
 	}
@@ -115,12 +120,13 @@ public class Visit extends BaseEntity {
 	}
 
 	public RecoveryRoom getRecoveryRoom() {
-		// To be implemented
-		return null;
+		 //To be implemented
+	return null;
 	}
 
-	public void setRecoveryRoom(RecoveryRoom room) {
+//	public void setRecoveryRoom(RecoveryRoom room) {
 		// To be implemented
-	}
+	//	this.recovery_room=room;
+	//}
 
 }
